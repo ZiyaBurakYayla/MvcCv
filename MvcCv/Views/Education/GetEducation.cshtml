@@ -1,0 +1,32 @@
+﻿@model MvcCv.Models.Entity.TblEducation
+
+@{
+    ViewBag.Title = "GetEducaiton";
+    Layout = "~/Views/Shared/_Adminlayout.cshtml";
+}
+
+<br />
+<h2>Eğitim Güncelleme</h2>
+<br />
+<form method="post">
+    @Html.Label("Eğitim Id")
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık1")
+    @Html.TextBoxFor(x => x.Subheading1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık2")
+    @Html.TextBoxFor(x => x.Subheading2, new { @class = "form-control" })
+    <br />
+    @Html.Label("GNO")
+    @Html.TextBoxFor(x => x.GPA, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary" type="submit">Güncelle</button>
+</form>
+

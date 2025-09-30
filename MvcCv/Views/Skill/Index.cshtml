@@ -1,0 +1,97 @@
+﻿@using MvcCv.Models.Entity;
+@model List<TblSkill>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Adminlayout.cshtml";
+}
+
+@{ 
+    string Color = "";
+}
+
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">Yetenek Listem</h2>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <a href="/Skill/AddSkill" class="btn btn-info">Yeni Yetenek Ekle</a>
+                                <br />
+                                <br />
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 40px">Id</th>
+                                            <th style="width: 650px">Yetenek</th>
+                                            <th>Derece</th>
+                                            <th style="width: 40px">Oran</th>
+                                            <th style="width: 165px">İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            if (item.Rate >= 0 && item.Rate <= 50)
+                                            {
+                                                Color = "progress-bar bg-danger";
+                                            }
+                                            if (item.Rate >= 51 && item.Rate <= 70)
+                                            {
+                                                Color = "progress-bar bg-warning";
+                                            }
+                                            if (item.Rate >= 71 && item.Rate <= 85)
+                                            {
+                                                Color = "progress-bar bg-primary";
+                                            }
+                                            if (item.Rate >= 86 && item.Rate <= 100)
+                                            {
+                                                Color = "progress-bar bg-success";
+                                            }
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.Skill</td>
+                                                <td>
+                                                    <div class="progress progress-xs">
+                                                        <div class="@Color" style="width: @item.Rate%"></div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="@Color">@item.Rate%</span></td>
+                                                <td>
+                                                    <a class="btn btn-info btn-sm" href="/Skill/GetSkill/@item.Id">
+                                                        <i class="fas fa-pencil-alt">
+                                                        </i>
+                                                        Düzenle
+                                                    </a>
+                                                    <a class="btn btn-danger btn-sm" href="/Skill/DeleteSkill/@item.Id">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                        Sil
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+    </div>
+</body>
+</html>
+
+
+

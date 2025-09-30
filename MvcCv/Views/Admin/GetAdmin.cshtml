@@ -1,0 +1,22 @@
+﻿@model MvcCv.Models.Entity.TblAdmin
+
+@{
+    ViewBag.Title = "GetAdmin";
+    Layout = "~/Views/Shared/_Adminlayout.cshtml";
+}
+<br />
+<h2>Kullanıcı Güncelleme</h2>
+<br />
+<form method="post">
+    @Html.Label("Admin Id")
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary" type="submit">Güncelle</button>
+</form>
+

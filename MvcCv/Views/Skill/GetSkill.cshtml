@@ -1,0 +1,22 @@
+﻿@model MvcCv.Models.Entity.TblSkill
+
+@{
+    ViewBag.Title = "GetSkill";
+    Layout = "~/Views/Shared/_Adminlayout.cshtml";
+}
+
+<h2>GetSkill</h2>
+<br />
+<form method="post">
+    @Html.Label("Yetenek Id")
+    @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek")
+    @Html.TextBoxFor(m => m.Skill, new { @class = "form-control" })
+    <br />
+    @Html.Label("Derece")
+    @Html.TextBoxFor(m => m.Rate, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary" type="submit">Güncelle</button>
+</form>
+

@@ -1,0 +1,46 @@
+﻿@using MvcCv.Models.Entity;
+@model IEnumerable<TblEducation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Adminlayout.cshtml";
+}
+
+<br />
+<h3 class="card-title">Eğitim Listesi</h3>
+<br />
+<br />
+<a href="/Education/AddEducation" class="btn btn-info">Yeni Eğitim Ekle</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Alt Başlık1</th>
+        <th>Alt Başlık2</th>
+        <th>GNO</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.Subheading1"</td>
+            <td>@item.Subheading2</td>
+            <td>@item.GPA</td>
+            <td>@item.Date</td>
+            <td><a href="/Education/DeleteEducation/@item.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Education/GetEducation/@item.Id" class="btn btn-warning">Düzenle</a></td>
+        </tr>
+
+    }
+</table>
+<br />
+
+
+

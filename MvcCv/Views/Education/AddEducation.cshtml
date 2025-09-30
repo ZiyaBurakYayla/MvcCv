@@ -1,0 +1,28 @@
+﻿@model MvcCv.Models.Entity.TblEducation
+
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_Adminlayout.cshtml";
+}
+<br />
+<h2>Yeni Eğitim Ekle</h2>
+<br />
+<form method="post">
+    <input class="form-control" type="text" name="Title" placeholder="Başlığı yazınız" />
+    @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+    <br />
+    <input class="form-control" type="text" name="Subheading1" placeholder="Alt başlık1" />
+    @Html.ValidationMessageFor(m => m.Subheading1, "", new { @class = "text-danger" })
+    <br />
+    <input class="form-control" type="text" name="Subheading2" placeholder="Alt başlık2" />
+    @Html.ValidationMessageFor(m => m.Subheading2, "", new { @class = "text-danger" })
+    <br />
+    <input class="form-control" type="text" name="GPA" placeholder="GNO" />
+    @Html.ValidationMessageFor(m => m.GPA, "", new { @class = "text-danger" })
+    <br />
+    <input class="form-control" type="text" name="Date" placeholder="Tarih" />
+    @Html.ValidationMessageFor(m => m.Date, "", new { @class = "text-danger" })
+    <br />
+    <button class="btn btn-primary" type="submit">Eğitim Ekle</button>
+</form>
+
