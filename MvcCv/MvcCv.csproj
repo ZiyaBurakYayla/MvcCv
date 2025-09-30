@@ -2044,6 +2044,15 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Image\Ekran görüntüsü 2025-10-01 014919.png" />
+    <Content Include="Image\Ekran görüntüsü 2025-10-01 015024.png" />
+    <Content Include="Image\Ekran görüntüsü 2025-10-01 015034.png" />
+    <Content Include="Image\Ekran görüntüsü 2025-10-01 015101.png" />
+    <Content Include="Image\Ekran görüntüsü 2025-10-01 015118.png" />
+    <Content Include="Image\Ekran görüntüsü 2025-10-01 020030.png" />
+    <Content Include="Image\Ekran görüntüsü 2025-10-01 020052.png" />
+    <Content Include="Image\Ekran görüntüsü 2025-10-01 020059.png" />
+    <Content Include="Image\Ekran görüntüsü 2025-10-01 020108.png" />
     <Content Include="login-form-20\css\bootstrap.min.css" />
     <Content Include="login-form-20\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="login-form-20\css\bootstrap\mixins\_reset-text.css" />
